@@ -1,0 +1,23 @@
+---
+#
+# Playbook to install the ELK stack + Beats
+#
+- name: install elf
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  hosts: elk
+  roles:
+  - { role: ansible-role-java }
+  - { role: ansible-role-elasticsearch }
+  - { role: ansible-role-logstash }
+  - { role: ansible-role-filebeat }
+
+- name: install kibana
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  hosts: kibana
+  roles:  
+  - { role: ansible-role-kibana }
+

@@ -1,0 +1,13 @@
+---
+elasticsearch_version: '7.x'
+elasticsearch_package_state: present
+
+elasticsearch_service_state: started
+elasticsearch_service_enabled: true
+
+elasticsearch_network_host: '["192.168.16.17","192.168.16.3","192.168.16.4"]'
+elasticsearch_http_port: 9200
+elasticsearch_localhost: ansible_ens33['ipv4']['address']
+
+elasticsearch_cluster_name: elk-msxw
+elasticsearch_discovery_zen: 3

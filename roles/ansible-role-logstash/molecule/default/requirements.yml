@@ -1,0 +1,3 @@
+---
+- src: ansible-role-java
+- src: ansible-role-elasticsearch

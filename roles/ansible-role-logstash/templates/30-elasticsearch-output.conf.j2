@@ -1,0 +1,8 @@
+output {
+  elasticsearch {
+    hosts => {{ logstash_elasticsearch_hosts | to_json }}
+    index => "logstash-%{[fields][hostname]}-%{+YYYY.MM.dd}"
+    manage_template => true
+    document_type => "%{[@metadata][type]}"
+  }
+}

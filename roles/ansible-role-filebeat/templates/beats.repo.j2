@@ -1,0 +1,8 @@
+[elastic-{{ filebeat_version }}]
+name=Elastic repository for {{ filebeat_version }} packages
+baseurl=https://mirrors.cloud.tencent.com/elasticstack/{{ filebeat_version }}/yum
+gpgcheck=0
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md
