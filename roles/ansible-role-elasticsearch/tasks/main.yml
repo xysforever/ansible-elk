@@ -30,7 +30,7 @@
 
 - name: Make sure Elasticsearch is running before proceeding.
   wait_for:
-    host: "{{ elasticsearch_network_host1 }}"
+    host: "{{ elasticsearch_makesure_start }}"
     port: "{{ elasticsearch_http_port }}"
     delay: 3
     timeout: 300

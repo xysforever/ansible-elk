@@ -11,3 +11,5 @@ elasticsearch_localhost: ansible_ens33['ipv4']['address']
 
 elasticsearch_cluster_name: elk-msxw
 elasticsearch_discovery_zen: 3
+
+elasticsearch_makesure_start: 192.168.16.17
